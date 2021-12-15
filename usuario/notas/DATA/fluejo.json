@@ -1,0 +1,79 @@
+[{
+    "flujos":[
+        {
+            "proceso": "P1",
+            "tipo": "I",
+            "rol": "Estudiante",
+            "procSig": "P2",
+            "formulario":"inscripcion.php"
+        },
+        {
+            "proceso": "P2",
+            "tipo": "P",
+            "rol": "Estudiante",
+            "procSig": "P3",
+            "formulario":"mensaje_inscripcion.php"
+        },
+        {
+            "proceso": "P3",
+            "tipo": "p",
+            "rol": "Estudiante",
+            "procSig": "P4",
+            "formulario":"verificar_pago.php"
+        },
+        {
+            "proceso": "P4",
+            "tipo": "P",
+            "rol": "Estudiante",
+            "procSig": "P5",
+            "formulario":"mensaje_inscripcion.php"
+        },
+        {
+            "proceso": "P5",
+            "tipo": "C",
+            "rol": "Cordinador",
+            "procSig": "NULL",
+            "formulario":"verifi_doc.php"
+        },
+        {
+            "proceso": "P6",
+            "tipo": "p",
+            "rol": "Cordinador",
+            "procSig": "NULL",
+            "formulario":"fallo_inscripcion.php"
+        },
+        {
+            "proceso": "P7",
+            "tipo": "C",
+            "rol": "Cordinador",
+            "procSig": "NULL",
+            "formulario":"veri_num_inscritos.php"
+        },
+        {
+            "proceso": "P8",
+            "tipo": "P",
+            "rol": "Cordinador",
+            "procSig": "NULL",
+            "formulario":"cierre_materia.php"
+        },
+        {
+            "proceso": "P9",
+            "tipo": "P",
+            "rol": "Cordinador",
+            "procSig": "NULL",
+            "formulario":"habilita_materia.php"
+        }
+    ],
+    "condicional":[
+        {
+            "proc": "P5",
+            "si":"P7",
+            "no":"P6"
+        },
+        {
+            "proc": "P7",
+            "si":"P9",
+            "no":"P8"
+        }   
+    ]
+}]

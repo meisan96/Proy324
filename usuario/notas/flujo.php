@@ -1,0 +1,85 @@
+<?php
+$xmlstrCondicional = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<condicionales>
+            <condicional>
+                <no>P6</no>
+                <proc>P5</proc>
+                <si>P7</si>
+            </condicional>
+            <condicional>
+                <no>P8</no>
+                <proc>P7</proc>
+                <si>P9</si>
+            </condicional>
+</condicionales>
+XML;
+$xmlstrFLujos = <<<XML
+<?xml version="1.0" encoding="UTF-8"?>
+<flujos>
+            <flujo>
+                <formulario>inscripcion.php</formulario>
+                <procSig>P2</procSig>
+                <proceso>P1</proceso>
+                <rol>Estudiante</rol>
+                <tipo>I</tipo>
+            </flujo>
+            <flujo>
+                <formulario>comprobar_pago.php</formulario>
+                <procSig>P3</procSig>
+                <proceso>P2</proceso>
+                <rol>Estudiante</rol>
+                <tipo>P</tipo>
+            </flujo>
+            <flujo>
+                <formulario>verificar_pago.php</formulario>
+                <procSig>P4</procSig>
+                <proceso>P3</proceso>
+                <rol>Estudiante</rol>
+                <tipo>p</tipo>
+            </flujo>
+            <flujo>
+                <formulario>mensaje_inscripcion.php</formulario>
+                <procSig>P5</procSig>
+                <proceso>P4</proceso>
+                <rol>Estudiante</rol>
+                <tipo>P</tipo>
+            </flujo>
+            <flujo>
+                <formulario>verifi_doc.php</formulario>
+                <procSig>NULL</procSig>
+                <proceso>P5</proceso>
+                <rol>Cordinador</rol>
+                <tipo>C</tipo>
+            </flujo>
+            <flujo>
+                <formulario>fallo_inscripcion.php</formulario>
+                <procSig>NULL</procSig>
+                <proceso>P6</proceso>
+                <rol>Cordinador</rol>
+                <tipo>p</tipo>
+            </flujo>
+            <flujo>
+                <formulario>veri_num_inscritos.php</formulario>
+                <procSig>NULL</procSig>
+                <proceso>P7</proceso>
+                <rol>Cordinador</rol>
+                <tipo>C</tipo>
+            </flujo>
+            <flujo>
+                <formulario>cierre_materia.php</formulario>
+                <procSig>NULL</procSig>
+                <proceso>P8</proceso>
+                <rol>Cordinador</rol>
+                <tipo>P</tipo>
+            </flujo>
+            <flujo>
+                <formulario>habilita_materia.php</formulario>
+                <procSig>NULL</procSig>
+                <proceso>P9</proceso>
+                <rol>Cordinador</rol>
+                <tipo>P</tipo>
+            </flujo>
+</flujos>        
+XML;
+?>
